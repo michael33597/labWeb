@@ -15,8 +15,9 @@
 $ npm install sass-loader node-sass --save-dev
 ```
 
-
-改參數要到 `// build/webpack.base.conf.js`
+* 改參數要到 `// build/webpack.base.conf.js`
+* `includePaths`:
+  `node-normalize-scss`
 
 ### 規劃
 

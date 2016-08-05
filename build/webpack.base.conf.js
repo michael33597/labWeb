@@ -3,6 +3,9 @@ var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 
+// scss mixins
+var cssRest = require('node-normalize-scss').includePaths;
+
 module.exports = {
   entry: {
     app: './src/main.js'
@@ -88,6 +91,6 @@ module.exports = {
     loaders: utils.cssLoaders()
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, "./some-folder")]
+    includePaths: [path.resolve(__dirname, "./some-folder"),  cssRest]
   }
 }

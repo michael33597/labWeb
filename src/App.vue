@@ -25,6 +25,8 @@ export default {
 
 <style lang="scss">
 
+@import "scss/global";
+
 .logo {
   width: 100px;
   height: 100px

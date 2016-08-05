@@ -1,9 +1,11 @@
 <template>
   <nav class="nav-top">
+    <ul class="nav-barand">ErgoLab</ul>
     <ul class="nav-list">
-      <li class="nav-item">item</li>
-      <li class="nav-item">item</li>
-      <li class="nav-item">item</li>
+      <li class="nav-item"><a href="">People</a></li>
+      <li class="nav-item"><a href="">Projects</a></li>
+      <li class="nav-item"><a href="">Paper</a></li>
+      <li class="nav-item"><a href="">Domain</a></li>
     </ul>
   </nav>
 </template>
@@ -28,6 +30,20 @@ export default {
     width: 100%;
     position: relative;
     height: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    ul{
+      list-style: none;
+    }
+  }
+
+  .nav-list{
+    display: flex;
+  }
+
+  .nav-item{
+    margin: 0 12px;
   }
 
 </style>
