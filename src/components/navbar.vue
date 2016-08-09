@@ -26,6 +26,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  @import '../scss/global';
   .nav-top{
     width: 100%;
     position: relative;
@@ -44,6 +45,10 @@ export default {
 
   .nav-item{
     margin: 0 12px;
+    a{
+      color: $link-color;
+      text-decoration: none;
+    }
   }
 
 </style>

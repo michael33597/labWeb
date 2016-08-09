@@ -5,6 +5,8 @@ var projectRoot = path.resolve(__dirname, '../')
 
 // scss mixins
 var cssRest = require('node-normalize-scss').includePaths;
+var bourbon = require('node-bourbon').includePaths;
+var neat = require('node-neat').includePaths;
 
 module.exports = {
   entry: {
@@ -91,6 +93,6 @@ module.exports = {
     loaders: utils.cssLoaders()
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, "./some-folder"),  cssRest]
+    includePaths: [path.resolve(__dirname, "./some-folder"),  cssRest, bourbon, neat[1]]
   }
 }
