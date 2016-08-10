@@ -2,7 +2,7 @@
   <nav class="nav-top">
     <ul class="nav-barand">ErgoLab</ul>
     <ul class="nav-list">
-      <li class="nav-item"><a href="">People</a></li>
+      <li class="nav-item"><a v-link="{path: '/people'}">People</a></li>
       <li class="nav-item"><a href="">Projects</a></li>
       <li class="nav-item"><a href="">Paper</a></li>
       <li class="nav-item"><a href="">Domain</a></li>

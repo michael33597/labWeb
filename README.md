@@ -30,6 +30,10 @@ $ npm install sass-loader node-sass --save-dev
 
 
 
+## VueRouter
+
+[Vue, Vue-loader, Vue-router](http://ning0707.com/2015/12/13/how-to-create-a-message-system-width-vue-vue-loader-vue-router-webpack/)
+
 
 ## Build Setup
 

@@ -4,10 +4,10 @@ import VueRouter from 'vue-router';
 import { configRouter } from './route-config';
 
 /* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App },
-});
+// new Vue({
+//   el: 'body',
+//   components: { App },
+// });
 
 Vue.use(VueRouter);
 // create router
