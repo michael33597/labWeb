@@ -1,11 +1,11 @@
 <template>
   <nav class="nav-top">
-    <ul class="nav-barand">ErgoLab</ul>
+    <ul class="nav-barand"><a v-link="{path: '/'}">Logo ErgoLab</a></ul>
     <ul class="nav-list">
       <li class="nav-item"><a v-link="{path: '/people'}">People</a></li>
-      <li class="nav-item"><a href="">Projects</a></li>
-      <li class="nav-item"><a href="">Paper</a></li>
-      <li class="nav-item"><a href="">Domain</a></li>
+      <li class="nav-item"><a v-link="{path: '/projects'}">Projects</a></li>
+      <li class="nav-item"><a v-link="{path: '/papers'}">Papers</a></li>
+      <li class="nav-item"><a v-link="{path: '/about'}">About</a></li>
     </ul>
   </nav>
 </template>

@@ -1,7 +1,6 @@
-<template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+<template lang="html">
+  <h1>paper page</h1>
+
 </template>
 
 <script>
@@ -12,15 +11,11 @@ export default {
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Hello World!',
+      msg: 'home pages',
     };
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
-  color: #42b983;
-}
+<style lang="scss">
 </style>
