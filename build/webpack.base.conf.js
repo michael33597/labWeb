@@ -85,6 +85,13 @@ module.exports = {
         loaders: ["style", "css", "sass"]
       }
     ]
+    ,
+    devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true
+    }
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')

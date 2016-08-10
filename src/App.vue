@@ -3,10 +3,13 @@
     <navbar class="fixed-top"></navbar>
     <div class="hero">
       <h1>Hero Section</h1>
-      <a v-link="{ path: '/about'}"></a>
+      <a v-link="{ path: '/about'}">about</a>
       <img class="logo" src="./assets/logo.png">
       <hello></hello>
     </div>
+    <router-view> </router-view>
+
+
 
 
   </div>
@@ -15,14 +18,12 @@
 <script>
 import Hello from './components/Hello';
 import navbar from './components/navbar';
-import about from './views/about';
 
 
 export default {
   components: {
     Hello,
     navbar,
-    about,
   },
 };
 
@@ -35,5 +36,12 @@ export default {
 .logo {
   width: 100px;
   height: 100px
+}
+
+.hero{
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+
 }
 </style>
