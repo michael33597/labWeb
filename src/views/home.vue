@@ -1,5 +1,8 @@
 <template lang="html">
-  <h1>home page</h1>
+  <div class="hero">
+    <h1>home page</h1>
+  </div>
+
 
 </template>
 
@@ -18,4 +21,11 @@ export default {
 </script>
 
 <style lang="scss">
+.hero{
+  width: 100%;
+  background-color: #554c4c;
+  color: #FFF;
+  display: block;
+  margin-top: 0;
+}
 </style>

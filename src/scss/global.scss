@@ -5,7 +5,9 @@
 /* import bourbon 先做出基本框架再放入 */
 @import "bourbon";
 @import "neat";
+// bitters : install with gems
 
+@import 'base/base';
 
 $link-color: #4a37f9;
 

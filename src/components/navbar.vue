@@ -33,6 +33,7 @@ export default {
     height: 70px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0;
 
     ul{
       list-style: none;
