@@ -44,6 +44,14 @@ export default {
     display: flex;
   }
 
+  a{
+    line-height: 70px;
+  }
+
+  .nav-barand{
+    padding-left: 3px;
+  }
+
   .nav-item{
     margin: 0 12px;
     a{

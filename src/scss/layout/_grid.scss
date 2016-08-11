@@ -1,0 +1,12 @@
+.section{
+  @include outer-container;
+}
+
+.section-contetn{
+  max-width: 20em;
+  @include outer-container;
+}
+
+.col-1-2{
+  @include span-columns(6);
+}
