@@ -1,6 +1,8 @@
 <template lang="html">
+<div>
   <h1>People page</h1>
   <img class="logo" src="../assets/logo.png">
+</div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template lang="html">
+<div class="">
   <div class="hero">
     <div class="hero-content">
       <img src="https://raw.githubusercontent.com/thoughtbot/empties/master/source/images/placeholder.png" alt="Logo Image" class="hero-logo">
@@ -34,6 +35,7 @@
       </div>
     </div>
   </div>
+</div>
 
 </template>
 

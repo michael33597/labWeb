@@ -1,5 +1,7 @@
 <template lang="html">
+<div>
   <h1>Projects List</h1>
+</div>
 
 </template>
 

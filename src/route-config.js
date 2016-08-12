@@ -27,4 +27,16 @@ export function configRouter(router) {
       name: 'papers',
     },
   });
+  /* global VUELOG_DATABASE */
+  if (VUELOG_DATABASE.deployment.useHomepage) {
+    router.on('/', {
+      name: 'home',
+      component: home,
+    });
+  } else {
+    router.redirect({
+      '/': '/papers',
+      '/p/:p': '/blog/p/:p',
+    });
+  }
 }

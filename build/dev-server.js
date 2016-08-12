@@ -56,6 +56,11 @@ app.use(hotMiddleware)
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
+var docsPath = path.posix.join(config.build.assetsPublicPath, config.build.docsSubDirectory)
+app.use(docsPath, express.static('./' + config.build.docsSubDirectory))
+var databasePath = path.posix.join(config.build.assetsPublicPath, config.build.databaseFileName)
+app.use(databasePath, express.static('./' + config.build.databaseFileName))
+
 module.exports = app.listen(port, function (err) {
   if (err) {
     console.log(err)
