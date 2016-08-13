@@ -24,8 +24,10 @@
         <h4 class="year-heading" v-text="2016 - n"></h4>
         <ul class="people-list">
           <li class="people" v-for="x in 3">
-            <div class="people-img"></div>
-            <h5 class="people-name">John Dou {{x}}</h5>
+            <a v-link="{name: 'person'}">
+              <div class="people-img"></div>
+              <h5 class="people-name">John Dou {{x}}</h5>
+            </a>
           </li>
         </ul>
       </li>

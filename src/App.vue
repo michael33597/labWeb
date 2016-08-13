@@ -2,7 +2,6 @@
   <div >
     <navbar class="fixed-top"></navbar>
     <router-view :database="database"></router-view>
-    <thefooter></thefooter>
   </div>
 
 

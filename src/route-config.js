@@ -3,6 +3,7 @@ import about from './views/about';
 import people from './views/people';
 import projects from './views/projects';
 import papers from './views/papers';
+import peoplePage from './views/peoplePage';
 
 export function configRouter(router) {
   router.map({
@@ -17,6 +18,10 @@ export function configRouter(router) {
     '/people': {
       component: people,
       name: 'people',
+    },
+    '/poeple/name': {
+      component: peoplePage,
+      name: 'person',
     },
     '/projects': {
       component: projects,
