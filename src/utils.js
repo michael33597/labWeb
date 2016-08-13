@@ -56,7 +56,26 @@ function classifyAllPosts (database) {
   }
 }
 
+function classifyAllPeople(database) {
+  var peopleList = database.peopleList
+  var peopleByYear = {}
+  peopleList.forEach((people) =>{
+    if (peopleByYear[people.year] === undefined) {
+      peopleByYear[people.year] = {
+        year: +people.year,
+        peopleList: []
+      }
+    }
+    peopleByYear[people.year].peopleList.push(people)
+  })
+
+  return {
+    'peopleByYear': peopleByYear
+  }
+}
+
 export default {
   formatTime,
-  classifyAllPosts
+  classifyAllPosts,
+  classifyAllPeople
 }

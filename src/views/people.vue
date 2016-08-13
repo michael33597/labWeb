@@ -20,18 +20,17 @@
   </div>
   <div class="time-line section">
     <ul class="section-content time-list">
-      <li class="time-list-year" v-for="n in 10"> <!-- vfor -->
-        <h4 class="year-heading" v-text="2016 - n"></h4>
+      <li class="time-list-year" v-for="byYear in peopleInY | orderBy 'year' -1" track-by="$index"> <!-- vfor -->
+        <h4 class="year-heading" v-text="byYear.year"></h4>
         <ul class="people-list">
-          <li class="people" v-for="x in 3">
+          <li class="people" v-for="person in byYear.peopleList" track-by="$index">
             <a v-link="{name: 'person'}">
               <div class="people-img"></div>
-              <h5 class="people-name">John Dou {{x}}</h5>
+              <h5 class="people-name" v-text="person.name"></h5>
             </a>
           </li>
         </ul>
       </li>
-
     </ul>
 
   </div>
@@ -39,15 +38,42 @@
 </template>
 
 <script>
+import utils from '../utils.js';
 export default {
+  props: ['database'],
   data() {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'about pages',
+      msg: 'people list',
+      postsByCategory: {},
+      postsByYear: {},
+      peopleInY: {},
     };
+  },
+  methods: {
+    classifyAllPosts() {
+      const result = utils.classifyAllPosts(this.database);
+      this.postsByCategory = result.byCategory;
+      this.postsByYear = result.byYear;
+      const peop = utils.classifyAllPeople(this.database);
+      this.peopleInY = peop.peopleByYear;
+    },
+  },
+  route: {
+    data(transition) {
+      this.displayType = 'all';
+      this.classifyAllPosts();
+
+      const params = transition.to.params;
+      const criteria = (params && params.category || params.year);
+
+      if (criteria) {
+        this.displayType = params.category ? 'category' : 'year';
+        this.classifyPosts(this.displayType, criteria);
+      }
+
+      this.$dispatch('updateDocumentTitle', 'Archive');
+      transition.next();
+    },
   },
 };
 </script>

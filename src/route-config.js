@@ -4,6 +4,7 @@ import people from './views/people';
 import projects from './views/projects';
 import papers from './views/papers';
 import peoplePage from './views/peoplePage';
+import paperPage from './views/paperPage';
 
 export function configRouter(router) {
   router.map({
@@ -30,6 +31,10 @@ export function configRouter(router) {
     '/papers': {
       component: papers,
       name: 'papers',
+    },
+    '/papers/item': {
+      component: paperPage,
+      name: 'paperunit',
     },
   });
   /* global VUELOG_DATABASE */

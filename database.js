@@ -15,9 +15,9 @@ var VUELOG_DATABASE = {
   deployment: {
     title: 'Ergolab',
     url: 'https://myst729.github.io/Vuelog/',
-    logo: './static/img/logo.svg',
+    logo: './static/favicon.ico',
     folder: './docs',          // The folder name where your source markdown files are stored
-    perPage: 3,                // How many posts are listed in a blog/category view
+    perPage: 5,                // How many posts are listed in a blog/category view
     displayTime: 'YYYY-MM-DD', // 'YYYY', 'YYYY-MM', or 'YYYY-MM-DD'
     routeTime: 'YYYY',         // 'YYYY', 'YYYY-MM', or 'YYYY-MM-DD', DO NOT include '/'
     useHomepage: true          // If a dedicated homepage isn't specified, it'll route to `/blog`
@@ -137,6 +137,36 @@ var VUELOG_DATABASE = {
       category: 'guide',
       date: 20160408
     }
+  ], //end post
+
+  // 人物資訊物件
+  peopleList:[
+    {
+      name: '周宥騰',
+      year: 2016,
+      type: 'master',
+      mail: 'yumaster1994@gmail.com',
+    },
+    {
+      name: '劉馥瑜',
+      year: 2016,
+      type: 'master',
+      mail: 'asfiksears@gmail.com',
+    },
+    {
+      name: '李宜家',
+      year: 2016,
+      type: 'phD',
+      mail: 'jellynina@gmail.com',
+    },
+    {
+      name: '賴儀',
+      year: 2015,
+      type: 'master',
+      mail: 'pinyi1019@gmail.com',
+    },
+
+
   ]
 
 }

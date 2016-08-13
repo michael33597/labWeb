@@ -1,48 +1,27 @@
 <template lang="html">
 <div>
-  <h1>paper page</h1>
+  <h1>papers List</h1>
   <div v-if="displayType === 'all'" class="content-body">
-        <h2>Posts by Category:</h2>
-        <ul>
-          <li v-for="byCategory in postsByCategory" track-by="$index">
-            <h4>
-              <a v-text="byCategory.title"></a>
-              <span v-text="' (' + byCategory.posts.length + ')'"></span>
-            </h4>
-            <ul>
-              <li v-for="post in byCategory.posts" track-by="$index">
-                <a v-text="post.title"></a>
-                <span v-text="' ( ' + post.displayTime + ' )'"></span>
-              </li>
-            </ul>
-          </li>
-        </ul>
 
-        <h2>Posts by Year:</h2>
+    <h2>Posts by Time:</h2>
+    <ul>
+      <li v-for="byYear in postsByYear | orderBy 'year' -1" track-by="$index">
+        <h4>
+          <a v-text="byYear.year"></a>
+          <span v-text="' (' + byYear.posts.length + ')'"></span>
+        </h4>
         <ul>
-          <li v-for="byYear in postsByYear | orderBy 'year' -1" track-by="$index">
-            <h4>
-              <a v-text="byYear.year"></a>
-              <span v-text="' (' + byYear.posts.length + ')'"></span>
-            </h4>
-            <ul>
-              <li v-for="post in byYear.posts" track-by="$index">
-                <a  v-text="post.title"></a>
-                <span> ( </span>
-                <a v-text="post.categoryTitle"></a>
-                <span> )</span>
-              </li>
-            </ul>
+          <li v-for="post in byYear.posts" track-by="$index">
+            <a v-link="{name: 'paperunit'}"  v-text="post.title"></a>
+            <span> ( </span>
+            <a v-text="post.categoryTitle"></a>
+            <span> )</span>
           </li>
         </ul>
+      </li>
+    </ul>
 
-        <h2>Pages:</h2>
-        <ul>
-          <li v-for="page in database.pages" track-by="$index">
-            <a v-text="page.title"></a>
-          </li>
-        </ul>
-      </div>
+  </div>
 </div>
 </template>
 
@@ -59,6 +38,7 @@ export default {
       postsInCategory: {},
       postsByYear: {},
       postsInYear: {},
+      peopleInY: {},
     };
   },
 
@@ -67,6 +47,8 @@ export default {
       const result = utils.classifyAllPosts(this.database);
       this.postsByCategory = result.byCategory;
       this.postsByYear = result.byYear;
+      const peop = utils.classifyAllPeople(this.database);
+      this.peopleInY = peop.peopleByYear;
     },
 
     classifyPosts(displayType, criteria) {
