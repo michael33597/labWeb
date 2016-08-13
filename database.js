@@ -13,7 +13,7 @@ var VUELOG_DATABASE = {
 
   // Edit your site from here
   deployment: {
-    title: 'Vuelog',
+    title: 'Ergolab',
     url: 'https://myst729.github.io/Vuelog/',
     logo: './static/img/logo.svg',
     folder: './docs',          // The folder name where your source markdown files are stored

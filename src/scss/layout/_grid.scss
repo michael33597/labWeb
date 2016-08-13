@@ -3,8 +3,7 @@
 }
 
 .section-contetn{
-  max-width: 20em;
-  @include outer-container;
+  @include outer-container(900px);
 }
 
 .col-1-2{

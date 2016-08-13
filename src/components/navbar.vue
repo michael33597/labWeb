@@ -34,6 +34,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
+    background-color: #FFF8E1;
 
     ul{
       list-style: none;
