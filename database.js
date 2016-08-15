@@ -91,10 +91,20 @@ var VUELOG_DATABASE = {
     {
       title: 'Guide',
       slug: 'guide'
+    },
+    {
+      title: 'Papers',
+      slug: 'papers'
     }
   ],
 
   posts: [
+    {
+      title: 'paper test',
+      slug: 'paper-test',
+      category: 'papers',
+      date: 20160812
+    },
     {
       title: 'How to add a post or page?',
       slug: 'how-to-add-a-post-or-page',
@@ -160,11 +170,17 @@ var VUELOG_DATABASE = {
       mail: 'jellynina@gmail.com',
     },
     {
-      name: '賴儀',
+      name: '賴品儀',
       year: 2015,
       type: 'master',
       mail: 'pinyi1019@gmail.com',
     },
+    {
+      name: '李易睿',
+      year: 2000,
+      type: 'phD',
+      mail: 'lee@gmail.com',
+    }
 
 
   ]
