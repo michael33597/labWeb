@@ -36,6 +36,10 @@ export function configRouter(router) {
       component: paperPage,
       name: 'paperunit',
     },
+    'papers/:slug': {
+      component: paperPage,
+      name: 'paperunitA',
+    },
   });
   /* global VUELOG_DATABASE */
   if (VUELOG_DATABASE.deployment.useHomepage) {

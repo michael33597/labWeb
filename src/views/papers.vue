@@ -12,7 +12,7 @@
         </h4>
         <ul>
           <li v-for="post in byYear.posts" track-by="$index">
-            <a v-link="{name: 'paperunit'}"  v-text="post.title"></a>
+            <a v-link="{name: 'paperunitA', params:{slug: post.slug}}"  v-text="post.title"></a>
             <span> ( </span>
             <a v-text="post.categoryTitle"></a>
             <span> )</span>

@@ -98,6 +98,15 @@ var VUELOG_DATABASE = {
     }
   ],
 
+  papers: [
+    {
+      title: 'paper test',
+      slug: 'paper-test',
+      tags: ['tags', 'tags'],
+      date: 20160812
+    }
+  ],
+
   posts: [
     {
       title: 'paper test',
