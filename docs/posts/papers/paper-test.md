@@ -10,3 +10,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 run npm divided_by:
 
 ```
+
+### 試試看其他md物件
+
+這會自動上傳圖片至 **[imgur](http://imgur.com)**，啥都不必煩惱了 :tada:
+![](https://i.imgur.com/9cgQVqD.png)
+
+## 標籤
+如同以下方式來使用標籤，它們會顯示在您的 **歷史紀錄**
+###### tags: `功能` `酷` `更新`
+
+![](./static/sample/sample1.png)

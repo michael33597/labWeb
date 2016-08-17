@@ -9,6 +9,7 @@
       <ul>
         <li v-for="project in byYear.projects" track-by="$index">
           <a v-text="project.title"></a>
+          <project-content :database="database" :record="project"></project-content>
         </li>
       </ul>
     </li>
@@ -21,11 +22,17 @@
 
 <script>
 import utils from '../utils.js';
+import projectContent from '../components/projectContent.vue';
 export default {
   props: ['database'],
+  components: {
+    projectContent,
+  },
   data() {
     return {
       projectsByYear: {},
+      record: {},
+      thisprojects: {},
     };
   },
 
