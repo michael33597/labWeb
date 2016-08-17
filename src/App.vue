@@ -1,7 +1,7 @@
 <template>
   <div >
     <navbar class="fixed-top"></navbar>
-    <router-view :database="database"></router-view>
+    <router-view :database="database" class="route-body"></router-view>
   </div>
 
 
@@ -52,10 +52,12 @@ export default {
 <style lang="scss">
 
 @import "scss/global";
-.body-content{
-  min-height: 800px;
-  display: block;
-}
+  .route-body{
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 15px auto;
+  }
 
 
 </style>

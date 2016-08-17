@@ -24,68 +24,68 @@ var VUELOG_DATABASE = {
   },
 
   // Search functionality is served with Algolia
-  search: {
-    enable: false,
-    appId: '',
-    apiKey: '',
-    indexName: '',
-    displayKey: ''
-  },
+  // search: {
+  //   enable: false,
+  //   appId: '',
+  //   apiKey: '',
+  //   indexName: '',
+  //   displayKey: ''
+  // },
 
-  navigation: [
-    {
-      label: 'Guide',
-      type: 'category',
-      path: '/category/guide'
-    },
-    {
-      label: 'About',
-      type: 'page',
-      path: '/page/all-about-vuelog'
-    },
-    {
-      label: 'Changelog',
-      type: 'page',
-      path: '/page/changelog'
-    },
-    {
-      label: 'Archive',
-      type: 'archive',
-      path: '/archive'
-    },
-    {
-      label: 'Links',
-      type: 'dropdown',
-      children: [
-        {
-          label: 'Weibo',
-          type: 'outgoing',
-          link: 'http://weibo.com/myst729'
-        },
-        {
-          label: 'GitHub',
-          type: 'outgoing',
-          link: 'https://github.com/myst729'
-        },
-        {
-          label: 'StackOverflow',
-          type: 'outgoing',
-          link: 'https://stackoverflow.com/users/1032492'
-        }
-      ]
-    }
-  ],
+  // navigation: [
+  //   {
+  //     label: 'Guide',
+  //     type: 'category',
+  //     path: '/category/guide'
+  //   },
+  //   {
+  //     label: 'About',
+  //     type: 'page',
+  //     path: '/page/all-about-vuelog'
+  //   },
+  //   {
+  //     label: 'Changelog',
+  //     type: 'page',
+  //     path: '/page/changelog'
+  //   },
+  //   {
+  //     label: 'Archive',
+  //     type: 'archive',
+  //     path: '/archive'
+  //   },
+  //   {
+  //     label: 'Links',
+  //     type: 'dropdown',
+  //     children: [
+  //       {
+  //         label: 'Weibo',
+  //         type: 'outgoing',
+  //         link: 'http://weibo.com/myst729'
+  //       },
+  //       {
+  //         label: 'GitHub',
+  //         type: 'outgoing',
+  //         link: 'https://github.com/myst729'
+  //       },
+  //       {
+  //         label: 'StackOverflow',
+  //         type: 'outgoing',
+  //         link: 'https://stackoverflow.com/users/1032492'
+  //       }
+  //     ]
+  //   }
+  // ],
 
-  pages: [
-    {
-      title: 'All about Vuelog',
-      slug: 'all-about-vuelog'
-    },
-    {
-      title: 'Changelog',
-      slug: 'changelog'
-    }
-  ],
+  // pages: [
+  //   {
+  //     title: 'All about Vuelog',
+  //     slug: 'all-about-vuelog'
+  //   },
+  //   {
+  //     title: 'Changelog',
+  //     slug: 'changelog'
+  //   }
+  // ],
 
   categories: [
     {
@@ -104,6 +104,15 @@ var VUELOG_DATABASE = {
       slug: 'paper-test',
       tags: ['tags', 'tags'],
       date: 20160812
+    }
+  ],
+
+  projects: [
+    {
+      title: 'Developing Storytelling Tools for Drama Education Activities for Children',
+      slug: 'dream-stage',
+      tags: ['tags', 'tags'],
+      date: 20130101,
     }
   ],
 
@@ -156,7 +165,9 @@ var VUELOG_DATABASE = {
       category: 'guide',
       date: 20160408
     }
-  ], //end post
+  ],
+
+  //end post
 
   // 人物資訊物件
   peopleList:[
@@ -165,12 +176,14 @@ var VUELOG_DATABASE = {
       year: 2016,
       type: 'master',
       mail: 'yumaster1994@gmail.com',
+      slug: 'tung-again',
     },
     {
       name: '劉馥瑜',
       year: 2016,
       type: 'master',
       mail: 'asfiksears@gmail.com',
+      slug:'fish-with-cash',
     },
     {
       name: '李宜家',

@@ -56,6 +56,24 @@ function classifyAllPosts (database) {
   }
 }
 
+function clssifyProjects(database) {
+  var projects = database.projects;
+  var projectsByYear = {};
+  projects.forEach((project) =>{
+    project.year = formatTime(project.date, 'YYYY')
+    if (projectsByYear[project.year] === undefined) {
+      projectsByYear[project.year] = {
+        year: +project.year,
+        projects: []
+      }
+    }
+    projectsByYear[project.year].projects.push(project);
+  });
+  return {
+    'projectsByYear': projectsByYear
+  }
+}
+
 function classifyAllPeople(database) {
   var peopleList = database.peopleList
   var peopleByYear = {}
@@ -77,5 +95,6 @@ function classifyAllPeople(database) {
 export default {
   formatTime,
   classifyAllPosts,
-  classifyAllPeople
+  classifyAllPeople,
+  clssifyProjects
 }
