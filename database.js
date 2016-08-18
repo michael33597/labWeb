@@ -190,6 +190,7 @@ var VUELOG_DATABASE = {
       year: 2016,
       type: 'phD',
       mail: 'jellynina@gmail.com',
+      slug: 'ikea',
     },
     {
       name: '賴品儀',
