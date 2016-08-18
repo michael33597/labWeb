@@ -195,7 +195,8 @@ var VUELOG_DATABASE = {
       name: '賴品儀',
       year: 2015,
       type: 'master',
-      mail: 'pinyi1019@gmail.com',
+      mail: 'pinyi1019@gmail.com'
+      slug: 'joe',
     },
     {
       name: '李易睿',
