@@ -113,6 +113,12 @@ var VUELOG_DATABASE = {
       slug: 'dream-stage',
       tags: ['tags', 'tags'],
       date: 20130101,
+    },
+    {
+      title: 'Long Dong Chiang',
+      slug: 'Long-Dong-Chiang',
+      tags: ['tags', 'tags'],
+      date: 20190101,
     }
   ],
 
