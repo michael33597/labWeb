@@ -6,7 +6,7 @@
       <div class="flex-row">
         <div class="flex-item">
           <img src="../assets/logo.png" alt="iron-man" / class="host-img">
-          <h2>陳建旭 教授</h2>
+          <h2>{{profname}} 教授</h2>
           <ul>
             <li>chenhsu@mail.ncku.edu.tw </li>
             <li>06-2757575 ext 54324</li>
@@ -43,6 +43,7 @@ export default {
   props: ['database'],
   data() {
     return {
+      profname: 'poke旭哥',
       msg: 'people list',
       postsByCategory: {},
       postsByYear: {},
